@@ -1,0 +1,237 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+}
+
+#headerWrapper {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+#navWrapper {
+    background-color: $primaryColor;
+}
+
+
+
+
+
+nav {
+    ul {
+        display: none;
+        margin:0;
+        padding: 0;
+        li a {
+            display: block;
+            padding: .75rem $gutter;
+            font-size: 1.1rem;
+            color:white;
+            text-decoration: none;
+            border-top: 1px solid darken($menuColor, 10%);
+            &:hover {background-color: darken($menuColor, 7%); }
+        } //end li a
+    } //end ul
+    ul li.active a { background-color: darken($menuColor, 10%);}
+    ul.open {display: block;}
+
+} // end nav
+
+nav button {
+    position: relative;
+    height: 44px;
+    width: 44px;
+    background: none;
+    border: none;
+    .line {
+        position: absolute;
+        height: 2px;
+        width: 60%;
+        left: 20%; // a 20% gap on the left, the width of the line is 60%, and leaves 20% on the right. equals 100% in total
+        background-color: white;
+        transition: all .3s ease;
+    } // end line
+    .top { top: 29%;}
+    .middle {top: 48%;}
+    .bottom {top: 67%;}
+} //end button
+
+#hamburgerBtn.open {
+    .top {
+        transform: rotate(45deg);
+        top:48%;
+
+    }
+    .middle, .bottom {
+        transform: rotate(-45deg);
+        top:48%;
+    }
+}
+// END NAV STUFF
+
+
+// START MAIN STUFF
+
+div.hero {
+    position: relative;
+    video {
+        width: 100%;
+        height: auto;
+    }
+    div{
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        color: white;
+        h2{
+            margin: 0;
+            font-size: 1.3rem;
+            text-shadow: 0 0 15px black ;
+        }
+        // p{ text-shadow: 0 0 15px black ;}
+    }
+} //end hero video 
+
+
+main div.cards, main h1 {padding: 20px  $gutter}
+main h1 {
+    margin: 0;
+    font-weight: $boldWeight;
+}
+
+
+// FLIP CARD STUFF START
+div.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0 ;
+}
+
+div.flip-card { 
+    position: relative;
+    perspective: 3200px;
+    width: 250px;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
+div.front, div.back {
+    // position: absolute;
+    border: solid lighten($pink, 35%) 2px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 4px 12px 40px 6px rgba(0,0,0,.1);
+    // font-size: ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    transition: transform .6s ease-in-out;
+    backface-visibility: hidden;
+    padding: $gutter;
+    h2, h3 {font-weight: $normalWeight;}
+}
+
+div.front { 
+    transform: rotateX(0deg);
+    background-color: $secondaryColor;
+    color: $pink;
+
+
+}
+
+div.back { 
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transform: rotateX(-180deg);
+    background-color: darken($pink, 10%);
+    color: white;
+    height: 299.42px;
+}
+
+div.flip-card:hover .front {
+    transform: rotateX(180deg);
+ }
+
+div.flip-card:hover .back {
+    transform: rotateX(0deg);
+ }
+
+
+div.socials {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    a {
+        display: block;
+        // border: 1px red solid;
+        border-radius: 5px;
+        font-size: 2rem;
+        margin: .2rem;
+        padding: .5rem;
+        color: white;
+        &:hover {
+            // color: white;
+            background-color: $pink;
+        }
+    }
+}//end of social
+// FLIP CARD STUFF END
+// END MAIN STUFF
+
+
+
+// footer stuff start
+#footerWrapper {
+    background-color: $primaryColor;
+}
+
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}

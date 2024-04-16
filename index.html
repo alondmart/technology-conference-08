@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Startup Summit</title>
+    <meta name="description" content="Alondra's sample start file">
+    <meta name="author" content="Alondra Martinez">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <!-- fav icon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+ 
+
+    
+    
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <a href="index.html"><img src="images/logo1x.png" alt="cutie pie's diner logo" width="50" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <div>
+                <h1>Startup Summit</h1>
+                <p>Building tomorrow together</p>
+            </div>
+        </header>
+    </div>
+    
+
+
+    <div id="navWrapper">
+        <nav>
+            <button id="hamburgerBtn" >
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </button>
+    
+            <ul id="primaryNav">
+            <li><a href="#">Home</a>
+            <li><a href="#">Program</a></li>
+            <li class="active" ><a href="#">Speakers</a></li>
+            <li><a href="#">Companies</a></li>
+            <li><a href="#">Tickets</a></li>
+        </ul>
+        </nav>
+    </div> <!-- end nav wrapper -->
+
+
+    <div id="mainWrapper">
+        <main>
+            <div class="hero">
+                <video autoplay muted playsinline loop width="800" height="300" >
+                    <source src="/media/hero-video-hb.webm" type="video/webm" />
+                    <source src="/media/hero-video-hb.mp4" type="video/mp4" />
+                </video>
+                <div>
+                    <h2>Building tomorrow together</h2>
+                    <!-- <p>more details in this section</p> -->
+                </div>
+            </div>
+              
+            <h1>Speakers</h1> 
+            <div class="cards">
+                <div class="flip-card">
+                    <div class="front">
+                        <img src="images/speaker1.jpg" alt="Natalia Sanchez" width="200" height="200">
+                        <h2>Natalia Sanchez</h2>
+                    </div> <!--end front -->
+                    <div class="back">
+                        <h2>Natalia Sanchez</h2>
+                        <p>CEO of "SaludApp," she developed a mobile healthcare app for Latino communities, ensuring access to quality services.</p>
+                        <div class="socials">
+                            <a  href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div> <!--end socials-->
+                    </div> <!--end back-->
+                </div> <!--end flip-card -->
+
+                <div class="flip-card">
+                    <div class="front">
+                        <img src="images/speaker2.jpg" alt="Maya Santos" width="200" height="200">
+                        <h2>Maya Santos</h2>
+                    </div> <!--end front -->
+                    <div class="back">
+                        <h2>Maya Santos</h2>
+                        <p>Co-founder of "UnitySphere", a social media platform fostering inclusivity and privacy.</p>
+                        <div class="socials">
+                            <a  href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div> <!--end socials-->
+                    </div> <!--end back-->
+                </div> <!--end flip-card -->
+
+                <div class="flip-card">
+                    <div class="front">
+                        <img src="images/speaker3.jpg" alt="Daniel Kim" width="200" height="200">
+                        <h2>Daniel Kim</h2>
+                    </div> <!--end front -->
+                    <div class="back">
+                        <h2>Daniel Kim</h2>
+                        <p>Daniel leads "CultureHR", an HR software tailored for small businesses, promoting diversity and efficiency.</p>
+                        <div class="socials">
+                            <a  href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a  href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div> <!--end socials-->
+                    </div> <!--end back-->
+                </div> <!--end flip-card -->
+            </div> <!--end all cards-->
+
+
+
+
+        </main>
+    </div>
+
+    <div>
+        <footer id="footerWrapper">
+            <p> &copy; <span id="year">x</span> Alondra Martinez   </p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
